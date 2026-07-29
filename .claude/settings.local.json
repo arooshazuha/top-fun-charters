@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.topfuncharters.com)",
+      "WebFetch(domain:topfuncharters.com)",
+      "WebSearch",
+      "Bash(npx --yes create-next-app@latest _scaffold --ts --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --skip-install --yes)",
+      "Bash(npx --yes create-next-app@latest scaffoldtmp --ts --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --skip-install --yes)",
+      "Bash(sort -k5 -n)",
+      "Bash(awk '{print $5\"\\\\t\"$9}')",
+      "Bash(grep -v '^\\\\s*$')"
+    ]
+  }
+}

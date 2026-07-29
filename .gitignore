@@ -33,6 +33,12 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# Exported customer data — NEVER commit (contains customer PII)
+/assets/Export_Contacts_*.xlsx
+
+# Large source video masters (e.g. 343MB 4K hero) — optimized copies live in public/videos/
+/assets/*.mp4
+
 # vercel
 .vercel
 
