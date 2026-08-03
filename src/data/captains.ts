@@ -1,6 +1,6 @@
 /**
  * Captain roster. Names, bios and photos are taken directly from the existing
- * captain list — bios are verbatim. Personal phone numbers from the source are
+ * captain list, bios are verbatim. Personal phone numbers from the source are
  * intentionally NOT published; all contact routes through the main line.
  * `credentials` only lists certifications explicitly stated by the captain.
  */

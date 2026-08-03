@@ -1,4 +1,4 @@
-/** Renders a JSON-LD <script>. Server component — safe, no client JS. */
+/** Renders a JSON-LD <script>. Server component, safe, no client JS. */
 export function JsonLd({ data }: { data: object | object[] }) {
   return (
     <script

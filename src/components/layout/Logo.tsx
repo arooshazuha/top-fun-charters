@@ -40,7 +40,7 @@ export function Logo({
   if (!linked) return img;
 
   return (
-    <Link href="/" aria-label="Top Fun Charters — home" className="inline-flex">
+    <Link href="/" aria-label="Top Fun Charters, home" className="inline-flex">
       {img}
     </Link>
   );

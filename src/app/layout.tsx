@@ -22,7 +22,7 @@ const instrument = Instrument_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — Anna Maria Private Yacht Charter`,
+    default: `${SITE.name} | Anna Maria Private Yacht Charter`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,

@@ -8,9 +8,9 @@ export type YachtFeature = { title: string; description: string; icon: string };
 
 export const YACHT = {
   name: "Top Fun",
-  headline: "A 50-foot performance yacht built for the day you'll remember",
+  headline: "A 50-foot luxury yacht built for the day you'll remember",
   intro:
-    "Top Fun is a 50-foot luxury performance yacht — fast when you want it, calm when you don't. She carries up to 13 guests in comfort, with two climate-controlled staterooms below, two full bathrooms, a proper galley, and a hydraulic swim platform that turns any sandbar into your own private beach club.",
+    "Top Fun is a 50-foot luxury yacht built for smooth, easy days on the water. She carries up to 13 guests in comfort, with two climate-controlled staterooms below, two full bathrooms, a proper galley, and a hydraulic swim platform that turns any sandbar into your own private beach club.",
   lengthFt: 50,
   maxGuests: 13,
 } as const;
@@ -19,14 +19,14 @@ export const YACHT_STATS: YachtStat[] = [
   { label: "Length", value: "50 feet", icon: "Ruler" },
   { label: "Guests", value: "Up to 13", icon: "Users" },
   { label: "Staterooms", value: "2 private", icon: "BedDouble" },
-  { label: "Top speed", value: "~40 mph", icon: "Gauge" },
+  { label: "Bathrooms", value: "2 full", icon: "ShowerHead" },
 ];
 
 export const YACHT_FEATURES: YachtFeature[] = [
   {
     title: "Hydraulic swim platform",
     description:
-      "Drop the platform at a sandbar or quiet cove and step straight into the Gulf — the easiest water entry on the water.",
+      "Drop the platform at a sandbar or quiet cove and step straight into the Gulf, the easiest water entry around.",
     icon: "Waves",
   },
   {
@@ -38,13 +38,13 @@ export const YACHT_FEATURES: YachtFeature[] = [
   {
     title: "Two full bathrooms",
     description:
-      "Two heads with showers on board — no rushing back to the dock, no roughing it.",
+      "Two heads with showers on board, so there's no rushing back to the dock and no roughing it.",
     icon: "ShowerHead",
   },
   {
     title: "Full galley",
     description:
-      "A complete galley with refrigerator and sink keeps your food and drinks cold all day. Bring what you like — we'll keep it chilled.",
+      "A complete galley with refrigerator and sink keeps your food and drinks cold all day. Bring what you like, and we'll keep it chilled.",
     icon: "Refrigerator",
   },
   {
@@ -54,22 +54,21 @@ export const YACHT_FEATURES: YachtFeature[] = [
     icon: "Sun",
   },
   {
-    title: "TVs & games for the kids",
+    title: "An easy day for everyone",
     description:
-      "TVs and video games on board keep younger guests happy — this is a charter the whole family actually enjoys.",
-    icon: "Tv",
+      "Calm-water cruising, shade in the cabins and an easy pace set by your captain make this a relaxing day the whole family can enjoy.",
+    icon: "Users",
   },
 ];
 
 /** Short, machine-readable spec list used for AEO answer blocks. */
 export const YACHT_SPEC_LINES: string[] = [
-  "50-foot luxury performance yacht",
+  "50-foot luxury yacht",
   "Up to 13 guests (6 or 13 depending on the charter option)",
   "Two private climate-controlled staterooms",
   "Two full bathrooms with showers",
   "Full galley with refrigerator and sink",
-  "TVs and video games on board",
   "Upper sightseeing / entertainment deck and large sundeck",
   "Hydraulic swim platform",
-  "Cruising speed around 10 mph; top speed near 40 mph",
+  "Relaxed 4-hour, 6-hour and 8-hour charter options",
 ];

@@ -27,7 +27,7 @@ export function GalleryPreview() {
           tone="light"
           eyebrow="The Gallery"
           title="A look aboard"
-          intro="Real photos from real charters — the yacht, the water and the days our guests keep coming back for."
+          intro="Real photos and videos from real charters: the yacht, the water and the days our guests keep coming back for."
         />
         <Link
           href="/photos"

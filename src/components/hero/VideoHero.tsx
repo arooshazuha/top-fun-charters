@@ -13,9 +13,9 @@ import { BookingButton } from "@/components/booking/BookingButton";
 import { LinkButton } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
-const POSTER = "/images/hero-poster.jpg";
-const VIDEO_1080 = "/videos/topfun-hero.mp4";
-const VIDEO_720 = "/videos/topfun-hero-720.mp4";
+const POSTER = "/images/topfun-hero-poster.jpg";
+const VIDEO_1080 = "/videos/topfuncharters-hero.mp4";
+const VIDEO_720 = "/videos/topfuncharters-hero-720.mp4";
 
 const HEADLINE = ["Anna", "Maria", "private", "yacht", "charter"];
 
@@ -67,13 +67,14 @@ export function VideoHero() {
   return (
     <section
       ref={ref}
-      aria-label="Top Fun Charters — Anna Maria Island private yacht charter"
+      aria-label="Top Fun Charters, Anna Maria Island private yacht charter"
       className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-ink pb-16 pt-[var(--header-h)] md:pb-20"
     >
-      {/* Media (poster + video) with scroll zoom + parallax */}
+      {/* Media (poster + video) with scroll zoom + parallax. A bright, coastal
+          color grade (lifted brightness + saturation) reads vibrant and blue. */}
       <motion.div
         aria-hidden
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 [filter:saturate(1.22)_brightness(1.08)_contrast(1.04)]"
         style={reduce ? undefined : { scale: mediaScale, y: mediaY }}
       >
         <Image
@@ -104,10 +105,10 @@ export function VideoHero() {
         )}
       </motion.div>
 
-      {/* Luxury dark / ocean overlay — strengthened so white text pops effortlessly */}
-      <div aria-hidden className="absolute inset-0 z-10 bg-black/30" />
-      <div aria-hidden className="absolute inset-0 z-10 bg-gradient-to-t from-ink via-ink/60 to-ink/35" />
-      <div aria-hidden className="absolute inset-0 z-10 bg-gradient-to-r from-ink/75 via-transparent to-transparent" />
+      {/* Legibility only, no color wash: a bottom-weighted deep-teal fade keeps
+          the white headline readable while the footage stays bright and clean. */}
+      <div aria-hidden className="absolute inset-0 z-10 bg-gradient-to-t from-ink via-ink/45 to-transparent" />
+      <div aria-hidden className="absolute inset-0 z-10 bg-gradient-to-r from-ink/40 via-transparent to-transparent" />
 
       {/* Content */}
       <motion.div
@@ -157,9 +158,9 @@ export function VideoHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
-            The whole boat, the whole day — yours. Cruise the Gulf aboard a
-            50-foot performance yacht for up to 13 guests. Sunsets, sandbars,
-            dolphins and Egmont Key.
+            The whole boat is yours. Cruise the calm Gulf aboard a 50-foot
+            luxury yacht for up to 13 guests. Relaxed 4-hour charters are the
+            sweet spot, with 2-hour and full-day options too.
           </motion.p>
 
           <motion.div

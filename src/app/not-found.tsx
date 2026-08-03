@@ -15,7 +15,7 @@ export default function NotFound() {
           This page has drifted off course
         </h1>
         <p className="mx-auto mt-5 max-w-md text-sand/70">
-          The page you&apos;re looking for isn&apos;t here — but the Gulf is
+          The page you&apos;re looking for isn&apos;t here, but the Gulf is
           still calling. Let&apos;s get you back on board.
         </p>
         <div className="mt-9 flex justify-center">

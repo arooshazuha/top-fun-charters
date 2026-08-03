@@ -14,10 +14,10 @@ const base =
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-brass text-ink shadow-[0_8px_24px_-8px_rgba(195,154,86,0.6)] hover:bg-brass-300 hover:shadow-[0_12px_30px_-8px_rgba(195,154,86,0.7)] active:translate-y-px",
+    "bg-teal text-white shadow-[0_8px_24px_-8px_rgba(0,141,139,0.55)] hover:bg-aqua hover:shadow-[0_12px_30px_-8px_rgba(86,150,145,0.6)] active:translate-y-px",
   dark: "bg-ink text-sand hover:bg-ink-800 active:translate-y-px",
   outline:
-    "border border-ink/25 text-ink hover:border-ink hover:bg-ink hover:text-sand active:translate-y-px",
+    "border border-ink/25 text-ink hover:border-aqua hover:bg-aqua hover:text-white active:translate-y-px",
   outlineLight:
     "border border-foam/35 text-foam backdrop-blur-sm hover:bg-foam hover:text-ink active:translate-y-px",
   light: "bg-sand text-ink hover:bg-foam active:translate-y-px",

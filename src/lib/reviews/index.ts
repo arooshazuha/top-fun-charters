@@ -21,7 +21,7 @@ export async function getReviews(): Promise<ReviewsPayload> {
       const live = await getGoogleReviews(apiKey, placeId);
       if (live.reviews.length > 0) payload = live;
     } catch (err) {
-      // Never break the page on a provider hiccup — fall back to seed.
+      // Never break the page on a provider hiccup, fall back to seed.
       console.error("[reviews] Google provider failed, using seed:", err);
     }
   }

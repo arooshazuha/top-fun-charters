@@ -17,7 +17,7 @@ import { FinalCta } from "@/components/sections/FinalCta";
 export const metadata: Metadata = buildMetadata({
   title: "Anna Maria Private Yacht Charter",
   description:
-    "Private luxury yacht charters on Anna Maria Island & Bradenton, FL. A 50-foot performance yacht for up to 13 guests — sunset cruises, dolphin watching, sandbars & Egmont Key. Check pricing and availability.",
+    "Private luxury yacht charters on Anna Maria Island & Bradenton, FL. A 50-foot luxury yacht for up to 13 guests. Sunset cruises, dolphin watching, sandbars and Egmont Key, with relaxed 4-hour charters. Check pricing and availability.",
   path: "/",
   keywords: [
     "Anna Maria Island yacht charter",

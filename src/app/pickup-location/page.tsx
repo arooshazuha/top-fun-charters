@@ -13,7 +13,7 @@ import { MAPS_EMBED_URL, MAPS_LINK_URL } from "@/config/site";
 export const metadata: Metadata = buildMetadata({
   title: "Pickup Location",
   description:
-    "Top Fun Charters departs from Safe Harbor Pier 77 Marina, 12312 Manatee Ave W, Bradenton, FL — directly across the bridge from Anna Maria Island. Free parking and easy-board floating docks.",
+    "Top Fun Charters departs from Safe Harbor Pier 77 Marina, 12312 Manatee Ave W, Bradenton, FL, directly across the bridge from Anna Maria Island. Free parking and easy-board floating docks.",
   path: "/pickup-location",
   keywords: ["Safe Harbor Pier 77 Marina", "yacht charter pickup Anna Maria Island", "Bradenton marina charter"],
 });
@@ -24,7 +24,7 @@ export default function PickupLocationPage() {
       <PageHeader
         eyebrow="Where We Meet"
         title="Safe Harbor Pier 77 Marina"
-        intro="Your charter departs from a full-service marina just across the bridge from Anna Maria Island — easy to find, easy to park, and easy to board."
+        intro="Your charter departs from a full-service marina just across the bridge from Anna Maria Island, easy to find, easy to park, and easy to board."
         image="/images/pier-77-marina.jpg"
         imageAlt="Safe Harbor Pier 77 Marina in Bradenton, the Top Fun Charters departure point"
         crumbs={[{ name: "Pickup Location", path: "/pickup-location" }]}

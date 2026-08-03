@@ -7,7 +7,7 @@ const BUSINESS_IMAGE = "/images/aerial-turquoise-water.jpg";
 type BuildMeta = {
   title: string;
   description: string;
-  /** Path beginning with "/" — becomes the canonical URL. */
+  /** Path beginning with "/", becomes the canonical URL. */
   path?: string;
   image?: string;
   noIndex?: boolean;
@@ -28,7 +28,7 @@ export function buildMetadata({
 }: BuildMeta): Metadata {
   const url = new URL(path, SITE.url).toString();
   const fullTitle =
-    path === "/" ? `${SITE.name} — ${SITE.tagline}` : `${title} | ${SITE.name}`;
+    path === "/" ? `${SITE.name} | ${SITE.tagline}` : `${title} | ${SITE.name}`;
 
   return {
     title: { absolute: fullTitle },
@@ -125,7 +125,7 @@ export function serviceSchema() {
         "@type": "PriceSpecification",
         priceCurrency: "USD",
         price: "1299",
-        description: "From — 4-hour private charter for up to 6 guests (taxes not included).",
+        description: "Starting rate for a 4-hour private charter for up to 6 guests (taxes not included).",
       },
     },
   };

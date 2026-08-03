@@ -12,7 +12,7 @@ import { SITE } from "@/config/site";
 export const metadata: Metadata = buildMetadata({
   title: "Thank You",
   description:
-    "Thank you — your Top Fun Charters inquiry has been received. Our team will reach out shortly to plan your private yacht charter on Anna Maria Island.",
+    "Thank you, your Top Fun Charters inquiry has been received. Our team will reach out shortly to plan your private yacht charter on Anna Maria Island.",
   path: "/thank-you",
   noIndex: true,
 });

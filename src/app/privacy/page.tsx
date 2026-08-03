@@ -8,7 +8,7 @@ import { PRIVACY } from "@/data/legal";
 export const metadata: Metadata = buildMetadata({
   title: "Privacy Policy",
   description:
-    "Privacy Policy for Top Fun Charters — how we collect and use your information when you book or contact us about a private yacht charter on Anna Maria Island, Florida.",
+    "Privacy Policy for Top Fun Charters, how we collect and use your information when you book or contact us about a private yacht charter on Anna Maria Island, Florida.",
   path: "/privacy",
 });
 

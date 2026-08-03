@@ -53,7 +53,7 @@ export function Header() {
         )}
 
         <div className="container-x relative flex h-full items-center justify-between gap-4">
-          {/* Logo — single source of truth by scroll state (color on the solid
+          {/* Logo, single source of truth by scroll state (color on the solid
               cream bar, cream over the dark hero). Deterministic → hydration-safe. */}
           <div className="flex items-center" style={{ height: 40 }}>
             <Logo variant={solid ? "color" : "cream"} height={40} priority linked={!open} />

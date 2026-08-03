@@ -42,7 +42,14 @@ export function PricingCard({ tier }: { tier: PricingTier }) {
       <ul className={cn("mt-5 divide-y", featured ? "divide-foam/10" : "divide-line")}>
         {tier.options.map((o) => (
           <li key={o.duration} className="flex items-center justify-between py-2.5 text-sm">
-            <span className={featured ? "text-sand/80" : "text-ink/80"}>{o.duration}</span>
+            <span className={cn("flex items-center gap-2", featured ? "text-sand/80" : "text-ink/80")}>
+              {o.duration}
+              {o.hours === 4 && (
+                <span className="rounded-full bg-warm px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wide text-ink">
+                  Sweet spot
+                </span>
+              )}
+            </span>
             <span className="font-semibold">${o.price.toLocaleString()}</span>
           </li>
         ))}
@@ -58,7 +65,7 @@ export function PricingCard({ tier }: { tier: PricingTier }) {
       </ul>
 
       <div className="mt-8 flex flex-col gap-3 pt-2">
-        {/* Pricing cards ARE the "checked pricing" step — link straight to the
+        {/* Pricing cards ARE the "checked pricing" step, link straight to the
             GHL booking calendar so guests can check live availability. */}
         <BookingButton
           label="Check availability"

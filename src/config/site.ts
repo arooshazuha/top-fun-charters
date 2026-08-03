@@ -8,17 +8,17 @@ export const SITE = {
   name: "Top Fun Charters",
   legalName: "Get Serious LLC",
   tagline: "Anna Maria private yacht charter",
-  /** Canonical production origin — update if the domain changes. */
+  /** Canonical production origin, update if the domain changes. */
   url: "https://www.topfuncharters.com",
   description:
-    "Private luxury yacht charters on Anna Maria Island & Bradenton, Florida. Cruise aboard a 50-foot performance yacht for up to 13 guests — sunset cruises, dolphin watching, Egmont Key, sandbars and more.",
+    "Private luxury yacht charters on Anna Maria Island & Bradenton, Florida. Cruise aboard a 50-foot luxury yacht for up to 13 guests. Sunset cruises, dolphin watching, Egmont Key, sandbars and more.",
 
   phone: {
-    display: "(941) 241-4077",
-    e164: "+19412414077",
-    href: "tel:+19412414077",
+    display: "941-241-2000",
+    e164: "+19412412000",
+    href: "tel:+19412412000",
   },
-  email: "support@topfuncharters.com",
+  email: "info@topfuncharters.com",
 
   /** Departure marina (verified pickup point). */
   address: {
@@ -51,13 +51,13 @@ export const SITE = {
   googleReviewUrl:
     "https://www.google.com/search?q=Top+Fun+Charters+Anna+Maria+reviews",
 
-  /** Founded / operating notes kept intentionally minimal — no unverified claims. */
+  /** Founded / operating notes kept intentionally minimal, no unverified claims. */
   foundedYear: 2024,
 } as const;
 
 export const FULL_ADDRESS = `${SITE.address.place}, ${SITE.address.street}, ${SITE.address.city}, ${SITE.address.region} ${SITE.address.postalCode}`;
 
-/** Google Maps embed (address query — no API key required). */
+/** Google Maps embed (address query, no API key required). */
 export const MAPS_EMBED_URL = `https://maps.google.com/maps?q=${encodeURIComponent(
   `${SITE.address.place}, ${SITE.address.street}, ${SITE.address.city}, ${SITE.address.region} ${SITE.address.postalCode}`,
 )}&t=&z=14&ie=UTF8&iwloc=&output=embed`;

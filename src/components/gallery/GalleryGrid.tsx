@@ -3,19 +3,33 @@
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import { GALLERY, GALLERY_CATEGORIES, type GalleryImage } from "@/data/gallery";
+import { X, ChevronLeft, ChevronRight, Play } from "lucide-react";
+import {
+  GALLERY,
+  GALLERY_CATEGORIES,
+  type GalleryMedia,
+} from "@/data/gallery";
+import { GENERATED_MEDIA } from "@/data/gallery-generated";
 import { cn } from "@/lib/utils";
 
 const FILTERS = ["All", ...GALLERY_CATEGORIES] as const;
+
+/** Curated images + auto-generated photos/videos, as one unified list. */
+const ALL_MEDIA: GalleryMedia[] = [
+  ...GALLERY.map((g) => ({ ...g, type: "image" as const })),
+  ...GENERATED_MEDIA,
+];
 
 export function GalleryGrid() {
   const [active, setActive] = useState<(typeof FILTERS)[number]>("All");
   const [index, setIndex] = useState<number | null>(null);
   const reduce = useReducedMotion();
 
-  const items = useMemo<GalleryImage[]>(
-    () => (active === "All" ? GALLERY : GALLERY.filter((g) => g.category === active)),
+  const items = useMemo<GalleryMedia[]>(
+    () =>
+      active === "All"
+        ? ALL_MEDIA
+        : ALL_MEDIA.filter((g) => g.category === active),
     [active],
   );
 
@@ -51,7 +65,7 @@ export function GalleryGrid() {
   return (
     <>
       {/* Filters */}
-      <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter photos">
+      <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter photos and videos">
         {FILTERS.map((f) => (
           <button
             key={f}
@@ -76,23 +90,35 @@ export function GalleryGrid() {
 
       {/* Masonry */}
       <div className="mt-8 columns-2 gap-3 md:columns-3 md:gap-4 lg:columns-4">
-        {items.map((img, i) => (
+        {items.map((item, i) => (
           <button
-            key={img.src}
+            key={`${item.src}-${i}`}
             type="button"
             onClick={() => setIndex(i)}
-            aria-label={`Open image: ${img.alt}`}
-            className="group mb-3 block w-full overflow-hidden rounded-lg md:mb-4"
+            aria-label={
+              item.type === "video" ? `Play video: ${item.alt}` : `Open image: ${item.alt}`
+            }
+            className="group relative mb-3 block w-full overflow-hidden rounded-lg md:mb-4"
           >
             <Image
-              src={img.src}
-              alt={img.alt}
-              width={img.width}
-              height={img.height}
+              src={item.type === "video" ? item.poster ?? item.src : item.src}
+              alt={item.alt}
+              width={item.width}
+              height={item.height}
               quality={70}
               sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
               className="h-auto w-full bg-sand-200 transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.04]"
             />
+            {item.type === "video" && (
+              <span
+                aria-hidden
+                className="pointer-events-none absolute inset-0 flex items-center justify-center bg-ink/20 transition-colors group-hover:bg-ink/10"
+              >
+                <span className="flex size-12 items-center justify-center rounded-full bg-foam/90 shadow-lg ring-1 ring-ink/10 transition-transform group-hover:scale-110">
+                  <Play className="size-5 translate-x-0.5 fill-ink text-ink" />
+                </span>
+              </span>
+            )}
           </button>
         ))}
       </div>
@@ -123,7 +149,7 @@ export function GalleryGrid() {
             <button
               type="button"
               onClick={(e) => { e.stopPropagation(); prev(); }}
-              aria-label="Previous image"
+              aria-label="Previous"
               className="absolute left-2 z-10 inline-flex size-12 items-center justify-center rounded-full bg-foam/10 text-sand transition-colors hover:bg-foam/20 md:left-6"
             >
               <ChevronLeft className="size-7" />
@@ -131,13 +157,13 @@ export function GalleryGrid() {
             <button
               type="button"
               onClick={(e) => { e.stopPropagation(); next(); }}
-              aria-label="Next image"
+              aria-label="Next"
               className="absolute right-2 z-10 inline-flex size-12 items-center justify-center rounded-full bg-foam/10 text-sand transition-colors hover:bg-foam/20 md:right-6"
             >
               <ChevronRight className="size-7" />
             </button>
 
-            {/* Image */}
+            {/* Media */}
             <motion.figure
               key={current.src}
               className="relative flex max-h-full max-w-5xl flex-col items-center"
@@ -146,15 +172,27 @@ export function GalleryGrid() {
               animate={reduce ? undefined : { opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             >
-              <Image
-                src={current.src}
-                alt={current.alt}
-                width={current.width}
-                height={current.height}
-                quality={82}
-                sizes="100vw"
-                className="max-h-[80vh] w-auto rounded-lg object-contain"
-              />
+              {current.type === "video" ? (
+                <video
+                  key={current.src}
+                  src={current.src}
+                  poster={current.poster}
+                  controls
+                  autoPlay
+                  playsInline
+                  className="max-h-[80vh] w-auto max-w-full rounded-lg bg-ink"
+                />
+              ) : (
+                <Image
+                  src={current.src}
+                  alt={current.alt}
+                  width={current.width}
+                  height={current.height}
+                  quality={82}
+                  sizes="100vw"
+                  className="max-h-[80vh] w-auto rounded-lg object-contain"
+                />
+              )}
               <figcaption className="mt-4 max-w-2xl text-center text-sm text-sand/70">
                 {current.alt}
                 <span className="ml-2 text-sand/40">

@@ -3,7 +3,7 @@ import type { ReviewsPayload } from "./types";
 /**
  * SEED / FALLBACK ONLY.
  *
- * These are REAL, published testimonials from topfuncharters.com — not invented.
+ * These are REAL, published testimonials from topfuncharters.com, not invented.
  * They are used only when no live review provider (Google Places) is configured
  * via env vars. Production data flows from the provider in ./index.ts, so nothing
  * here is a hard-coded production array baked into the UI.

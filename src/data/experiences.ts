@@ -1,6 +1,6 @@
 /**
  * Charter experiences. Only experiences the business actually offers
- * (verified from topfuncharters.com). Copy is intentionally understated —
+ * (verified from topfuncharters.com). Copy is intentionally understated -
  * no promises the crew can't keep.
  */
 
@@ -27,7 +27,7 @@ export const EXPERIENCES: Experience[] = [
     slug: "dolphin-watching",
     title: "Dolphin Watching",
     blurb:
-      "Our local dolphins love to ride the wake. Cruise at an easy pace and watch them play alongside the boat — a favorite with kids and grandkids.",
+      "Our local dolphins love to ride the wake. Cruise at an easy pace and watch them play alongside the boat, a favorite with kids and grandkids.",
     image: "/images/aerial-yacht-wake.jpg",
     imageAlt: "Wake behind the Top Fun yacht where dolphins play near Anna Maria Island",
     icon: "Fish",
@@ -45,7 +45,7 @@ export const EXPERIENCES: Experience[] = [
     slug: "egmont-key",
     title: "Egmont Key",
     blurb:
-      "Run out to Egmont Key — a remote island of white sand, historic ruins and some of the best shelling on the Gulf Coast.",
+      "Cruise out to Egmont Key, a remote island of white sand, historic ruins and some of the best shelling on the Gulf Coast.",
     image: "/images/egmont-key.jpg",
     imageAlt: "Egmont Key island beach reached by Top Fun Charters",
     icon: "TreePalm",
@@ -63,7 +63,7 @@ export const EXPERIENCES: Experience[] = [
     slug: "celebrations",
     title: "Private Celebrations",
     blurb:
-      "Birthdays, bachelor and bachelorette parties, anniversaries, family reunions — the whole boat is yours for the day.",
+      "Birthdays, bachelor and bachelorette parties, anniversaries, family reunions: the whole boat is yours.",
     image: "/images/gallery-01.jpg",
     imageAlt: "Guests celebrating aboard a private Top Fun Charters yacht",
     icon: "PartyPopper",

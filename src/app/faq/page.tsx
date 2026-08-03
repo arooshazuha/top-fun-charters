@@ -13,7 +13,7 @@ import { FAQ_CATEGORIES, ALL_FAQS } from "@/data/faq";
 export const metadata: Metadata = buildMetadata({
   title: "FAQ",
   description:
-    "Answers to common questions about Top Fun Charters — guests and capacity, food and drinks, what to bring, pets, smoking, fishing, cancellations, weather, pickup and booking for Anna Maria Island yacht charters.",
+    "Answers to common questions about Top Fun Charters, guests and capacity, food and drinks, what to bring, pets, smoking, fishing, cancellations, weather, pickup and booking for Anna Maria Island yacht charters.",
   path: "/faq",
   keywords: ["Anna Maria Island yacht charter FAQ", "what to bring on a boat charter"],
 });

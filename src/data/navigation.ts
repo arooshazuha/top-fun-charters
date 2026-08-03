@@ -15,7 +15,7 @@ export type NavItem = {
 };
 
 /**
- * Primary navigation — preserves the existing business structure
+ * Primary navigation, preserves the existing business structure
  * (Home · Contact · Pickup · Photos · FAQ · Price List · Captains · Forms).
  */
 export const NAV_ITEMS: NavItem[] = [
@@ -32,9 +32,9 @@ export const NAV_ITEMS: NavItem[] = [
     children: [
       { label: "All forms", href: "/forms", description: "Waivers & charter agreements" },
       { label: "Waiver", href: GHL.forms.waiver, external: true, description: "Required participant waiver" },
-      { label: "6-Person Charter", href: GHL.forms.sixPersonCharter, external: true, description: "1–6 guest booking form" },
-      { label: "13-Person Charter", href: GHL.forms.thirteenPersonCharter, external: true, description: "7–13 guest booking form" },
-      { label: "13-Person + Captain", href: GHL.forms.thirteenPersonWithCaptain, external: true, description: "Captained 13-guest form" },
+      { label: "1-6 Guest Charter", href: GHL.forms.sixPersonCharter, external: true, description: "1 to 6 guest booking form" },
+      { label: "7-13 Guest Charter", href: GHL.forms.thirteenPersonCharter, external: true, description: "7 to 13 guest booking form" },
+      { label: "Captain Selection", href: "/forms#captain-selection", description: "Choose your captain (7-13 guests)" },
     ],
   },
   { label: "Contact", href: "/contact" },

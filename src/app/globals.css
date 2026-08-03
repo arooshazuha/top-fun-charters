@@ -1,30 +1,45 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ *
- * Top Fun Charters — design tokens
- * Ocean-inspired, but not a "generic blue site": deep teal-navy grounds
- * the palette, warm sand carries the light surfaces, and polished brass
- * is the single accent (the color of boat hardware at golden hour).
+ * Top Fun Charters, design tokens
+ * Bright coastal palette: deep ocean teal-blue grounds, crisp white and
+ * cool aqua tints carry the light, and premium gold is the accent that
+ * marks the high-value moments (badges, stars, emphasized words).
  * ------------------------------------------------------------------ */
 @theme {
-  --color-ink: #081a22; /* near-black teal navy — primary dark ground */
-  --color-ink-800: #0c2530;
-  --color-deep: #0c2733; /* secondary dark surface */
-  --color-sea: #15697b; /* mid teal — used sparingly */
-  --color-sea-600: #0f5666;
-  --color-aqua: #5cc2d0; /* bright highlight — very sparingly */
+  /* ---- Brand palette: bright coastal blue + premium gold ---- */
+  --color-teal: #008d8b;      /* Deep Teal, primary CTAs / links */
+  --color-teal-600: #0a6f7d;  /* bright teal-blue, readable accent text on white */
+  --color-aqua: #569691;      /* Coastal Aqua, button hovers / secondary */
+  --color-sage: #9eb2a6;      /* Seafoam Sage, soft borders / sub-elements */
+  --color-warm: #e1af85;      /* Warm Sand, soft warm highlight */
+  --color-warm-300: #eeccaa;
+  --color-beach: #dbc1ab;     /* Soft Beach Tint, occasional warmth */
+  --color-gold: #caa34e;      /* Golden, premium accent (marks / badges / stars) */
+  --color-gold-300: #e7cf92;  /* light gold, premium accent on dark grounds */
+
+  /* ---- Structural tokens, mapped onto the palette ---- */
+  --color-ink: #0a4353;       /* deep ocean teal-blue, dark grounds + heading/body text */
+  --color-ink-800: #0e5568;   /* lifted ocean blue, hover on dark */
+  --color-deep: #06303d;      /* darkest ocean-blue surface */
+  --color-sea: #008d8b;       /* legacy alias, Deep Teal */
+  --color-sea-600: #0a6f7d;
   --color-foam: #ffffff;
 
-  --color-sand: #f5f0e6; /* warm cream — primary light ground */
-  --color-sand-100: #faf6ee;
-  --color-sand-200: #ece2d0; /* cards / panels on light */
-  --color-line: #ddd2bd; /* hairline on light surfaces */
+  /* Light grounds: crisp white + bright, cool aqua tints */
+  --color-sand: #ffffff;      /* crisp white, primary light ground + light text on dark */
+  --color-sand-100: #f1f8f9;  /* very light aqua, cards / panels */
+  --color-sand-200: #e4f1f3;  /* light sky-aqua, alternate sections */
+  --color-line: #d0e3e4;      /* cool light hairline */
 
-  --color-brass: #c39a56; /* the accent */
-  --color-brass-600: #a97f42;
-  --color-brass-300: #e6cd9c;
+  /* Accent family, split by contextual role to match existing usage:
+     brass-600 lives on LIGHT grounds  -> bright teal-blue accent text/icons
+     brass + brass-300 live on DARK grounds + fills -> premium gold (badges, stars, icons) */
+  --color-brass: #caa34e;     /* gold, badge/pill fills + dark-ground icons/stars */
+  --color-brass-600: #0a6f7d; /* teal-blue, accent text/icons on light grounds */
+  --color-brass-300: #e7cf92; /* light gold, accents on dark grounds */
 
-  --color-muted: #5c6b70; /* muted body text on light */
+  --color-muted: #4a636d;     /* cool muted blue-grey body text on light */
 
   --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
   --font-sans: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
@@ -34,8 +49,8 @@
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
 
-  --shadow-card: 0 1px 2px rgba(8, 26, 34, 0.04), 0 12px 40px -12px rgba(8, 26, 34, 0.18);
-  --shadow-float: 0 30px 60px -20px rgba(8, 26, 34, 0.35);
+  --shadow-card: 0 1px 2px rgba(10, 67, 83, 0.04), 0 12px 40px -12px rgba(10, 67, 83, 0.18);
+  --shadow-float: 0 30px 60px -20px rgba(10, 67, 83, 0.35);
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -94,12 +109,12 @@
   }
 
   ::selection {
-    background: var(--color-brass);
-    color: var(--color-ink);
+    background: var(--color-teal);
+    color: var(--color-foam);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-brass);
+    outline: 2px solid var(--color-teal);
     outline-offset: 2px;
     border-radius: 2px;
   }
@@ -151,7 +166,7 @@
   color: transparent;
 }
 
-/* Subtle film grain — kills the flat "AI gradient" look */
+/* Subtle film grain, kills the flat "AI gradient" look */
 @utility grain {
   position: relative;
 }

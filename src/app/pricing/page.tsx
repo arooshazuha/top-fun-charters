@@ -11,7 +11,7 @@ import { PRICING_TIERS, PRICING_NOTES } from "@/data/pricing";
 export const metadata: Metadata = buildMetadata({
   title: "Price List",
   description:
-    "Top Fun Charters price list for Anna Maria Island & Bradenton, FL. Private 50-foot yacht charters from $1,299 — 4, 6 and 8-hour options for 1–6 or 7–13 guests. Taxes not included.",
+    "Top Fun Charters price list for Anna Maria Island & Bradenton, FL. Private 50-foot yacht charters from $1,299, 4, 6 and 8-hour options for 1-6 or 7-13 guests. Taxes not included.",
   path: "/pricing",
   keywords: [
     "Anna Maria Island yacht charter price",
@@ -32,7 +32,7 @@ export default function PricingPage() {
       <PageHeader
         eyebrow="Pricing"
         title="Simple, all-in charter rates"
-        intro="One flat rate for the whole yacht. Pick your group size and how long you'd like to be out — the boat, and the day, are entirely yours."
+        intro="One flat rate for the whole yacht. Pick your group size and charter length, with our relaxed 4-hour charter the most popular way out. The boat is entirely yours."
         crumbs={[{ name: "Price List", path: "/pricing" }]}
       />
 

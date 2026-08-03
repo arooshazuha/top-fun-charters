@@ -20,10 +20,10 @@ export type PricingTier = {
 export const PRICING_TIERS: PricingTier[] = [
   {
     id: "1-6",
-    name: "1–6 Guests",
+    name: "1-6 Guests",
     guests: "Up to 6 guests",
     summary:
-      "Our private yacht rental for smaller groups — perfect for couples, families and friends who want the whole boat to themselves.",
+      "Our private yacht rental for smaller groups, perfect for couples, families and friends who want the whole boat to themselves.",
     includes: [
       "Private 50-foot yacht",
       "Up to 6 guests total",
@@ -39,10 +39,10 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: "7-13",
-    name: "7–13 Guests",
+    name: "7-13 Guests",
     guests: "7 to 13 guests",
     summary:
-      "The full experience for larger groups and celebrations. Price includes the yacht, your captain, crew and fuel — just show up and enjoy.",
+      "The full experience for larger groups and celebrations. Price includes the yacht, your captain, crew and fuel, so you can just show up and enjoy.",
     includes: [
       "Private 50-foot yacht",
       "Up to 13 guests total",
@@ -61,8 +61,9 @@ export const PRICING_TIERS: PricingTier[] = [
 
 /** Verified fine print. */
 export const PRICING_NOTES: string[] = [
+  "Four-hour charters are our most popular option and the relaxed sweet spot; shorter 2-hour outings can be arranged on request.",
   "Taxes are not included in quoted pricing.",
-  "The 7–13 guest rate includes yacht, captain, crew and fuel.",
+  "The 7-13 guest rate includes yacht, captain, crew and fuel.",
   "Six or 13 is the maximum legal number of passengers, including the person who booked. Exceptions cannot be made.",
   "Alternate pickup or drop-off locations can be arranged with advance notice for an additional fuel and crew cost.",
 ];

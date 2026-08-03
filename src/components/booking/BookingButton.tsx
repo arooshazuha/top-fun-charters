@@ -26,7 +26,7 @@ type Props = {
  * By default it says "Check pricing and availability" and routes INTERNALLY to
  * the pricing page (`/pricing`), where the guest then taps "Check availability"
  * to open the GHL booking calendar. Pass an absolute `http(s)` href (e.g.
- * `bookingUrl()`) to link straight out to GHL instead — those open in a new tab.
+ * `bookingUrl()`) to link straight out to GHL instead, those open in a new tab.
  *
  * Centralised so the label + destination live in one place (see config/ghl.ts).
  */
@@ -69,7 +69,7 @@ export function BookingButton({
     );
   }
 
-  // Internal funnel step — client-side navigation, same tab.
+  // Internal funnel step, client-side navigation, same tab.
   return (
     <Link href={href} onClick={() => track(event, { label })} className={classes}>
       {inner}

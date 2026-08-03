@@ -1,8 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { ShieldCheck, Users, Anchor, Sailboat, ArrowUpRight, Lock } from "lucide-react";
+import {
+  ShieldCheck,
+  Users,
+  Anchor,
+  Sailboat,
+  ArrowUpRight,
+  Lock,
+  UserRoundCheck,
+} from "lucide-react";
 import { GHL } from "@/config/ghl";
+import { CAPTAINS } from "@/data/captains";
 import { track } from "@/lib/analytics";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 
@@ -16,28 +26,22 @@ const FORMS = [
   },
   {
     icon: Users,
-    title: "6-Person Charter",
-    desc: "Booking and details form for private charters of 1–6 guests.",
+    title: "1-6 Guest Charter",
+    desc: "Booking and details form for private charters of 1 to 6 guests.",
     href: GHL.forms.sixPersonCharter,
   },
   {
-    icon: Users,
-    title: "13-Person Charter",
-    desc: "Booking and details form for larger groups of 7–13 guests.",
-    href: GHL.forms.thirteenPersonCharter,
-  },
-  {
     icon: Anchor,
-    title: "13-Person + Captain",
-    desc: "Captained charter form for groups of up to 13 guests.",
-    href: GHL.forms.thirteenPersonWithCaptain,
+    title: "7-13 Guest Charter",
+    desc: "Booking form for larger groups of 7 to 13 guests. Your captain and crew are included; choose your captain in the step below.",
+    href: GHL.forms.thirteenPersonCharter,
   },
 ];
 
 export function FormsDirectory() {
   return (
     <div>
-      <Stagger className="grid gap-4 sm:grid-cols-2">
+      <Stagger className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {FORMS.map((form) => (
           <StaggerItem key={form.title}>
             <a
@@ -68,6 +72,73 @@ export function FormsDirectory() {
         ))}
       </Stagger>
 
+      {/* Captain Selection: a dedicated step in the 7-13 guest workflow. Larger
+          charters always run with a captain, so choosing one is part of booking. */}
+      <div
+        id="captain-selection"
+        className="mt-6 rounded-2xl border border-brass/30 bg-brass/[0.05] p-6 md:p-8"
+      >
+        <div className="flex items-center gap-3">
+          <div className="flex size-11 shrink-0 items-center justify-center rounded-full border border-brass/40 bg-brass/10">
+            <UserRoundCheck className="size-5 text-brass-600" />
+          </div>
+          <div>
+            <span className="eyebrow text-brass-600">7-13 guests</span>
+            <h3 className="font-display text-xl text-ink">Captain selection</h3>
+          </div>
+        </div>
+
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
+          Every 7 to 13 guest charter runs with a professional captain and crew,
+          included in your rate. Review our captains below and note your
+          preferred captain when you complete the 7 to 13 guest charter form.
+          We&apos;ll do our best to match your request based on availability.
+        </p>
+
+        <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {CAPTAINS.map((c) => (
+            <li
+              key={c.slug}
+              className="flex items-center gap-3 rounded-xl border border-line bg-sand-100 p-3"
+            >
+              <div className="relative size-12 shrink-0 overflow-hidden rounded-full ring-1 ring-line">
+                <Image
+                  src={c.photo}
+                  alt={`Captain ${c.name}`}
+                  fill
+                  quality={80}
+                  sizes="48px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="min-w-0">
+                <p className="truncate font-medium text-ink">{c.name}</p>
+                <p className="truncate text-xs text-muted">{c.tags[0] ?? c.role}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a
+            href={GHL.forms.thirteenPersonCharter}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => track("form_opened", { form: "7-13 Guest Charter" })}
+            className="inline-flex items-center justify-center gap-1.5 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-sand transition-colors hover:bg-deep"
+          >
+            Book the 7 to 13 guest charter
+            <ArrowUpRight className="size-4" />
+          </a>
+          <Link
+            href="/captains"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-brass-600 hover:text-brass"
+          >
+            Read full captain bios <ArrowUpRight className="size-4" />
+          </Link>
+        </div>
+      </div>
+
       {/* Bareboat + help */}
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
         <div className="flex flex-col rounded-xl border border-line bg-sand-100 p-6">
@@ -91,7 +162,7 @@ export function FormsDirectory() {
           <Lock className="mt-0.5 size-5 shrink-0 text-brass-600" />
           <p className="text-sm leading-relaxed text-muted">
             Forms open securely in our booking system in a new tab. Your
-            information goes directly to Top Fun Charters — no third-party
+            information goes directly to Top Fun Charters, with no third-party
             sharing.
           </p>
         </div>

@@ -10,7 +10,7 @@ import { SITE, FULL_ADDRESS, MAPS_EMBED_URL, MAPS_LINK_URL } from "@/config/site
 export const metadata: Metadata = buildMetadata({
   title: "Contact Us",
   description:
-    "Contact Top Fun Charters in Bradenton / Anna Maria Island, FL. Call or text (941) 241-4077, email support@topfuncharters.com, or check live availability to book your private yacht charter.",
+    "Contact Top Fun Charters in Bradenton / Anna Maria Island, FL. Call or text 941-241-2000, email info@topfuncharters.com, or check live availability to book your private yacht charter.",
   path: "/contact",
 });
 
@@ -67,7 +67,7 @@ export default function ContactPage() {
               <Info className="mt-0.5 size-5 shrink-0 text-brass-600" />
               <p className="text-sm leading-relaxed text-muted">
                 Planning a cancellation? Please send your request in writing by
-                email or text — we&apos;re unable to acknowledge verbal,
+                email or text, we&apos;re unable to acknowledge verbal,
                 over-the-phone requests or voicemails.
               </p>
             </div>

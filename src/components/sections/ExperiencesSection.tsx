@@ -67,7 +67,7 @@ export function ExperiencesSection() {
         <SectionHeading
           eyebrow="On the Water"
           title="Ways to spend your day"
-          intro="Every charter is private and yours to shape. Here's how most days begin — mix and match with your captain."
+          intro="Every charter is private and yours to shape. Here's how most days begin. Mix and match with your captain."
         />
         <div className="hidden md:block">
           <LinkButton href="/photos" variant="outline" size="md">

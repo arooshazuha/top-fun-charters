@@ -8,7 +8,7 @@ import { CANCELLATION } from "@/data/legal";
 export const metadata: Metadata = buildMetadata({
   title: "Cancellation Policy",
   description:
-    "Top Fun Charters cancellation policy — how to request a cancellation in writing, and how weather, conduct and payment are handled for your Anna Maria Island yacht charter.",
+    "Top Fun Charters cancellation policy, how to request a cancellation in writing, and how weather, conduct and payment are handled for your Anna Maria Island yacht charter.",
   path: "/cancellation-policy",
 });
 

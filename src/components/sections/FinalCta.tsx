@@ -35,7 +35,7 @@ export function FinalCta({ directBooking = false }: { directBooking?: boolean })
         </Reveal>
         <Reveal delay={0.05}>
           <h2 className="mx-auto mt-5 max-w-3xl text-balance font-display text-[clamp(2.2rem,5vw,4rem)] font-light leading-[1.05] text-foam">
-            The whole boat. The whole day. <em className="italic text-brass-300">Yours.</em>
+            The whole boat. Just your crew. <em className="italic text-brass-300">Yours.</em>
           </h2>
         </Reveal>
         <Reveal delay={0.1}>

@@ -19,7 +19,7 @@ export function YachtShowcase() {
             <div className="group relative aspect-[4/5] overflow-hidden rounded-lg ring-1 ring-foam/10">
               <Image
                 src="/images/yacht-front-view.jpg"
-                alt="The 50-foot Top Fun performance yacht anchored on a calm Gulf sandbar near Anna Maria Island"
+                alt="The 50-foot Top Fun luxury yacht anchored on a calm Gulf sandbar near Anna Maria Island"
                 fill
                 quality={82}
                 sizes="(max-width: 1024px) 100vw, 45vw"

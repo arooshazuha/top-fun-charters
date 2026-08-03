@@ -17,7 +17,7 @@ const PILLARS = [
   {
     icon: Anchor,
     title: "Set up for a real day out",
-    text: "Two staterooms, two baths, a full galley and a swim platform — comfort from the dock and back.",
+    text: "Two staterooms, two baths, a full galley and a swim platform, with comfort from the dock and back.",
   },
   {
     icon: CalendarCheck,
@@ -39,8 +39,8 @@ export function WhyUs() {
         <Reveal delay={0.05}>
           <p className="mt-6 text-balance font-display text-[clamp(1.8rem,3.8vw,3rem)] font-light leading-[1.12] text-ink">
             There are plenty of boats for hire on Anna Maria Island. There&apos;s
-            only one that&apos;s <em className="italic text-brass-600">yours </em> for
-            the whole day — captain, crew, and a fifty-foot deck with nowhere
+            only one that&apos;s <em className="italic text-brass-600">yours </em> alone,
+            captain and crew included, with a fifty-foot deck and nowhere
             you&apos;d rather be.
           </p>
         </Reveal>

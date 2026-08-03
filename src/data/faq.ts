@@ -1,6 +1,6 @@
 /**
  * FAQ content. Answers are drawn from the live FAQ page and the business's
- * Terms of Service / Waiver. Nothing here is invented — where the source only
+ * Terms of Service / Waiver. Nothing here is invented, where the source only
  * states a rule, we restate the rule without inventing a rationale.
  */
 
@@ -20,12 +20,12 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Does the guest count include the person who booked?",
         answer:
-          "Yes. Please don't bring more than 6 total if you booked the 1–6 charter, or more than 13 total (including the person who booked) if you chose the 7–13 option. These are legal limits and exceptions cannot be made.",
+          "Yes. Please don't bring more than 6 total if you booked the 1-6 charter, or more than 13 total (including the person who booked) if you chose the 7-13 option. These are legal limits and exceptions cannot be made.",
       },
       {
         question: "Is this a good trip for kids and families?",
         answer:
-          "Absolutely. There are TVs and video games on board for younger guests, two climate-controlled staterooms for shade and a break, and our captains are experienced with families.",
+          "Absolutely. Two climate-controlled staterooms give kids shade and a place to rest, the hydraulic swim platform makes getting in and out of the water easy, and our captains are experienced with families.",
       },
     ],
   },
@@ -34,14 +34,14 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     title: "On the Water",
     items: [
       {
-        question: "How fast does the boat go?",
+        question: "What is the pace like on the water?",
         answer:
-          "Top Fun is a performance yacht and can reach speeds close to 40 mph. Excursions usually maintain a speed of around 10 mph to keep guests comfortable and allow dolphins to come and play around the boat. If you have the need for speed, you can probably talk the captain into opening up the throttles for a bit if the situation permits.",
+          "Easy and relaxed. We cruise at a gentle, comfortable pace so everyone can settle in, take in the scenery and let the dolphins come play alongside the boat. This is smooth, scenic cruising built around a laid-back day on the water, which is exactly why guests love it.",
       },
       {
         question: "Will we see dolphins?",
         answer:
-          "Dolphins are common in local waters and often ride the boat's wake — that's one reason we cruise at an easy pace. We can't guarantee wildlife, but sightings are frequent and a favorite part of the trip.",
+          "Dolphins are common in local waters and often ride the boat's wake, which is one reason we cruise at an easy pace. We can't guarantee wildlife, but sightings are frequent and a favorite part of the trip.",
       },
       {
         question: "Is this a fishing charter?",
@@ -51,7 +51,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "How long are charters?",
         answer:
-          "Charters run for 4, 6 or 8 hours. Pricing for each length is on the Price List.",
+          "Four hours is our most popular charter and the sweet spot for a relaxing day on the water. We also offer 6-hour and full-day 8-hour charters, and shorter 2-hour outings can be arranged on request. Pricing for each length is on the Price List.",
       },
     ],
   },
@@ -62,12 +62,12 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Can we bring our own food and drinks?",
         answer:
-          "Yes — bring whatever food and drinks you would like (no red wine, please). Small coolers and ice are welcome, and there's a refrigerator on board to keep things cold.",
+          "Yes. Bring whatever food and drinks you would like (no red wine, please). Small coolers and ice are welcome, and there's a refrigerator on board to keep things cold.",
       },
       {
         question: "Is there a bathroom on board?",
         answer:
-          "Yes — the yacht has two full bathrooms with showers, plus a full galley with a sink and refrigerator.",
+          "Yes. The yacht has two full bathrooms with showers, plus a full galley with a sink and refrigerator.",
       },
     ],
   },
@@ -78,7 +78,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "What should I bring?",
         answer:
-          "Bring the food and drinks you'd like (no red wine), a small cooler and ice if you want, towels, a hat and lotion sunscreen. Everything else — swim platform, staterooms, restrooms — is on board.",
+          "Bring the food and drinks you'd like (no red wine), a small cooler and ice if you want, towels, a hat and lotion sunscreen. Everything else, from the swim platform to the staterooms and restrooms, is on board.",
       },
       {
         question: "What should I NOT bring?",
@@ -125,7 +125,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Where do we meet for the charter?",
         answer:
-          "Safe Harbor Pier 77 Marina, 12312 Manatee Ave W, Bradenton, FL 34209 — directly across the bridge from Anna Maria Island on Route 64. There's free parking and easy-to-board floating docks; meet at the end of the middle dock where the yacht is positioned.",
+          "Safe Harbor Pier 77 Marina, 12312 Manatee Ave W, Bradenton, FL 34209, directly across the bridge from Anna Maria Island on Route 64. There's free parking and easy-to-board floating docks; meet at the end of the middle dock where the yacht is positioned.",
       },
       {
         question: "Can you pick us up somewhere else?",
@@ -135,7 +135,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Is there parking at the marina?",
         answer:
-          "Yes — free parking is available at the marina. The ship store, a Tiki Bar and other amenities are on site as well.",
+          "Yes. Free parking is available at the marina. The ship store, a Tiki Bar and other amenities are on site as well.",
       },
     ],
   },

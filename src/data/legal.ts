@@ -4,7 +4,7 @@
  *   (assets/TERMS OF SERVICE 3-21-25.pdf).
  * - PRIVACY summarizes the data practices stated within that same document.
  * - CANCELLATION states only verified policy points (written-request rule,
- *   weather/conduct clauses, payment) — no invented refund timeframes.
+ *   weather/conduct clauses, payment), no invented refund timeframes.
  * Governing entity: Get Serious LLC (Top Fun Charters), Manatee County, FL.
  */
 
@@ -20,7 +20,7 @@ export const TERMS: LegalDoc = {
       heading: "Definitions",
       body: [
         "\"Top Fun Charters\" refers to Get Serious LLC, including its officers, directors, employees, agents, affiliates, contractors, licensors, business partners, successors and assigns.",
-        "\"Captain\" refers to the individual(s) assigned by Top Fun Charters to provide services to you, or — in the case of a bareboat charter — the captain and crew you have hired.",
+        "\"Captain\" refers to the individual(s) assigned by Top Fun Charters to provide services to you, or, in the case of a bareboat charter, the captain and crew you have hired.",
         "\"Services\" refers to the information and services provided or made available by Top Fun Charters. \"You\" refers to the user of the Services who has accepted this Agreement.",
       ],
     },
@@ -75,7 +75,7 @@ export const TERMS: LegalDoc = {
     {
       heading: "Contact",
       body: [
-        "If you have any questions about this Agreement, please contact us at support@topfuncharters.com.",
+        "If you have any questions about this Agreement, please contact us at info@topfuncharters.com.",
       ],
     },
   ],
@@ -89,8 +89,8 @@ export const PRIVACY: LegalDoc = {
     {
       heading: "Information we collect",
       body: [
-        "Information you provide directly — such as your name, phone number, email address and booking details when you contact us, request availability or complete a form or waiver.",
-        "Technical information — such as device, system and application data gathered when you access our website, used to operate and improve the site.",
+        "Information you provide directly, such as your name, phone number, email address and booking details when you contact us, request availability or complete a form or waiver.",
+        "Technical information, such as device, system and application data gathered when you access our website, used to operate and improve the site.",
       ],
     },
     {
@@ -98,7 +98,7 @@ export const PRIVACY: LegalDoc = {
       body: [
         "To provide and manage your charter, respond to your inquiries, and send service-related announcements and administrative messages.",
         "To contact you by telephone and/or text message for updates and marketing purposes, consistent with the consent you provide when you reach out or book.",
-        "Technical information may be used in aggregate — in a form that does not personally identify you — to maintain and improve the Services.",
+        "Technical information may be used in aggregate, in a form that does not personally identify you, to maintain and improve the Services.",
       ],
     },
     {
@@ -118,7 +118,7 @@ export const PRIVACY: LegalDoc = {
       heading: "Updates & contact",
       body: [
         "We may update this Privacy Policy from time to time to reflect legal requirements and best practices; please check back periodically for changes.",
-        "Questions about your privacy? Contact us at support@topfuncharters.com.",
+        "Questions about your privacy? Contact us at info@topfuncharters.com.",
       ],
     },
   ],
@@ -132,7 +132,7 @@ export const CANCELLATION: LegalDoc = {
     {
       heading: "How to request a cancellation",
       body: [
-        "All cancellation requests must be made in writing — by email to support@topfuncharters.com or by text to (941) 241-4077.",
+        "All cancellation requests must be made in writing, by email to info@topfuncharters.com or by text to 941-241-2000.",
         "We are unable to acknowledge any verbal, over-the-phone request or voicemail. Please make sure your request is submitted in writing so we have a record of it.",
       ],
     },
@@ -146,14 +146,14 @@ export const CANCELLATION: LegalDoc = {
     {
       heading: "Conduct",
       body: [
-        "If a guest's behavior endangers the crew or other guests, or breaks the law — including excessive alcohol consumption or abusive behavior — the captain may end the trip. In that case, no refund or contribution to costs will be provided.",
+        "If a guest's behavior endangers the crew or other guests, or breaks the law, including excessive alcohol consumption or abusive behavior, the captain may end the trip. In that case, no refund or contribution to costs will be provided.",
       ],
     },
     {
       heading: "Payment",
       body: [
         "Charter fees are due at the time of booking unless other written arrangements have been approved. A captain and boat are not dispatched until fees are paid in full.",
-        "Questions about your specific charter? Contact us at support@topfuncharters.com or (941) 241-4077.",
+        "Questions about your specific charter? Contact us at info@topfuncharters.com or 941-241-2000.",
       ],
     },
   ],

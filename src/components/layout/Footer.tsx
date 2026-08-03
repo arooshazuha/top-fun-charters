@@ -39,7 +39,7 @@ export function Footer() {
           <Logo variant="cream" height={44} />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-sand/65">
             Private luxury yacht charters on Anna Maria Island and Bradenton,
-            Florida. Up to 13 guests aboard a 50-foot performance yacht.
+            Florida. Up to 13 guests aboard a 50-foot luxury yacht.
           </p>
           <div className="mt-6 flex flex-col gap-3 text-sm">
             <a href={SITE.phone.href} className="group inline-flex items-center gap-3 text-sand/80 hover:text-brass-300">

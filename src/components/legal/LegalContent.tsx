@@ -1,4 +1,5 @@
 import type { LegalDoc } from "@/data/legal";
+import { SITE } from "@/config/site";
 import { Reveal } from "@/components/motion/Reveal";
 
 export function LegalContent({ doc }: { doc: LegalDoc }) {
@@ -26,8 +27,8 @@ export function LegalContent({ doc }: { doc: LegalDoc }) {
 
       <p className="mt-14 rounded-xl border border-line bg-sand-100 p-5 text-sm text-muted">
         Questions about this policy? Contact us at{" "}
-        <a href="mailto:support@topfuncharters.com" className="font-medium text-brass-600 hover:underline">
-          support@topfuncharters.com
+        <a href={`mailto:${SITE.email}`} className="font-medium text-brass-600 hover:underline">
+          {SITE.email}
         </a>
         .
       </p>
