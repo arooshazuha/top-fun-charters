@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
-import { Info, CreditCard, CalendarCheck, FileSignature, Anchor } from "lucide-react";
+import {
+  Info,
+  CreditCard,
+  CalendarCheck,
+  FileSignature,
+  Anchor,
+  Ship,
+  UserRoundCheck,
+  Wallet,
+  BadgeCheck,
+} from "lucide-react";
 import { buildMetadata } from "@/lib/seo";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/ui/Section";
@@ -26,13 +36,37 @@ const STEPS = [
   { icon: Anchor, title: "Meet at the marina", text: "Arrive at Safe Harbor Pier 77, step aboard, and your captain takes it from there." },
 ];
 
+/** How the USCG bareboat structure works for 7-13 guest charters. */
+const BAREBOAT_POINTS = [
+  {
+    icon: Ship,
+    title: "You charter the boat",
+    text: "The listed rate covers exclusive, private use of the 50-foot yacht for your chosen length of time.",
+  },
+  {
+    icon: UserRoundCheck,
+    title: "You choose your captain",
+    text: "Every trip runs with a licensed, professional captain for safety. You select your captain from our roster and hire them directly.",
+  },
+  {
+    icon: Wallet,
+    title: "The captain is paid separately",
+    text: "The captain's fee is arranged with and paid directly to your captain, separate from the boat charter fee. It is not bundled into the boat rate or paid by Top Fun Charters.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Direct, with no markups",
+    text: "You work straight with the owner-operator, so there are no broker markups or hidden booking fees, just competitive, transparent pricing.",
+  },
+];
+
 export default function PricingPage() {
   return (
     <>
       <PageHeader
         eyebrow="Pricing"
-        title="Simple, all-in charter rates"
-        intro="One flat rate for the whole yacht. Pick your group size and charter length, with our relaxed 4-hour charter the most popular way out. The boat is entirely yours."
+        title="Simple, transparent charter rates"
+        intro="Clear rates for the whole yacht. Pick your group size and charter length, with our relaxed 4-hour charter the most popular way out. The boat is entirely yours."
         crumbs={[{ name: "Price List", path: "/pricing" }]}
       />
 
@@ -58,6 +92,30 @@ export default function PricingPage() {
                   Payment accepted by Zelle, Venmo, CashApp or credit card.
                 </li>
               </ul>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Bareboat charter explainer for 7-13 guests (USCG compliance) */}
+        <Reveal>
+          <div className="mx-auto mt-8 max-w-4xl rounded-2xl border border-brass/30 bg-brass/[0.05] p-6 md:p-8">
+            <span className="eyebrow text-brass-600">7 to 13 guests</span>
+            <h2 className="mt-2 font-display text-2xl text-ink">What this means for you</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
+              Charters for more than six guests follow the U.S. Coast Guard
+              bareboat charter model. Here is exactly how it works, and why it
+              keeps your pricing transparent.
+            </p>
+            <div className="mt-6 grid gap-5 sm:grid-cols-2">
+              {BAREBOAT_POINTS.map((p) => (
+                <div key={p.title} className="flex gap-3">
+                  <p.icon className="mt-0.5 size-5 shrink-0 text-brass-600" strokeWidth={1.5} />
+                  <div>
+                    <h3 className="font-medium text-ink">{p.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-muted">{p.text}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </Reveal>

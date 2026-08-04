@@ -39,6 +39,12 @@ export function PricingCard({ tier }: { tier: PricingTier }) {
         <span className="font-display text-4xl">${from.toLocaleString()}</span>
       </div>
 
+      {tier.priceNote && (
+        <p className={cn("mt-2 text-xs leading-relaxed", featured ? "text-sand/60" : "text-muted")}>
+          {tier.priceNote}
+        </p>
+      )}
+
       <ul className={cn("mt-5 divide-y", featured ? "divide-foam/10" : "divide-line")}>
         {tier.options.map((o) => (
           <li key={o.duration} className="flex items-center justify-between py-2.5 text-sm">

@@ -12,7 +12,7 @@ export function PricingTeaser() {
       <SectionHeading
         align="center"
         eyebrow="Pricing"
-        title="Simple, all-in charter rates"
+        title="Simple, transparent charter rates"
         intro="One flat rate for the whole boat. Pick your group size and charter length, from a relaxed 4-hour trip to a full day out. Taxes are not included."
         className="mx-auto"
       />

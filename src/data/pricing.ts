@@ -14,6 +14,8 @@ export type PricingTier = {
   options: PricingOption[];
   /** GHL form key used for this tier's booking form. */
   formKey: "sixPersonCharter" | "thirteenPersonCharter";
+  /** Short clarifier shown under the price (e.g. the bareboat captain note). */
+  priceNote?: string;
   featured?: boolean;
 };
 
@@ -23,10 +25,10 @@ export const PRICING_TIERS: PricingTier[] = [
     name: "1-6 Guests",
     guests: "Up to 6 guests",
     summary:
-      "Our private yacht rental for smaller groups, perfect for couples, families and friends who want the whole boat to themselves.",
+      "Our private captained charter for smaller groups, perfect for couples, families and friends who want the whole boat to themselves.",
     includes: [
-      "Private 50-foot yacht",
-      "Up to 6 guests total",
+      "Private 50-foot yacht, exclusive use",
+      "Licensed captain included in the rate",
       "Hydraulic swim platform & full amenities",
       "Bring your own food & drinks",
     ],
@@ -36,17 +38,18 @@ export const PRICING_TIERS: PricingTier[] = [
       { duration: "8 hours", hours: 8, price: 1799 },
     ],
     formKey: "sixPersonCharter",
+    priceNote: "Captained charter. A licensed captain is included in the rate.",
   },
   {
     id: "7-13",
     name: "7-13 Guests",
     guests: "7 to 13 guests",
     summary:
-      "The full experience for larger groups and celebrations. Price includes the yacht, your captain, crew and fuel, so you can just show up and enjoy.",
+      "A private bareboat charter for larger groups and celebrations. You charter the boat and select a licensed captain who is hired and paid directly, keeping pricing transparent and Coast Guard compliant.",
     includes: [
-      "Private 50-foot yacht",
-      "Up to 13 guests total",
-      "Captain, crew & fuel included",
+      "Private 50-foot yacht, exclusive use",
+      "7 to 13 guests total",
+      "Bareboat charter: you select and hire your captain directly",
       "Hydraulic swim platform & full amenities",
     ],
     options: [
@@ -55,6 +58,8 @@ export const PRICING_TIERS: PricingTier[] = [
       { duration: "8 hours", hours: 8, price: 2320 },
     ],
     formKey: "thirteenPersonCharter",
+    priceNote:
+      "Boat charter fee only. A licensed captain is selected and paid directly to the captain, as a separate fee.",
     featured: true,
   },
 ];
@@ -63,7 +68,9 @@ export const PRICING_TIERS: PricingTier[] = [
 export const PRICING_NOTES: string[] = [
   "Four-hour charters are our most popular option and the relaxed sweet spot; shorter 2-hour outings can be arranged on request.",
   "Taxes are not included in quoted pricing.",
-  "The 7-13 guest rate includes yacht, captain, crew and fuel.",
+  "For 1 to 6 guests, your charter is captained: a licensed captain is included in the rate.",
+  "For 7 to 13 guests, charters follow the U.S. Coast Guard bareboat model. The listed rate is the private boat charter; your licensed captain is selected and paid directly to the captain, as a separate fee. Captain fees are not paid by Top Fun Charters.",
+  "You book directly with the owner-operator, so there are no broker markups or hidden booking fees.",
   "Six or 13 is the maximum legal number of passengers, including the person who booked. Exceptions cannot be made.",
   "Alternate pickup or drop-off locations can be arranged with advance notice for an additional fuel and crew cost.",
 ];

@@ -21,8 +21,8 @@ const PILLARS = [
   },
   {
     icon: CalendarCheck,
-    title: "Simple, private booking",
-    text: "Check live availability, choose your hours, and your day is on the calendar in minutes.",
+    title: "Book direct, no brokers",
+    text: "Straight from the owner-operator, with no broker markups or hidden booking fees. Check live availability and lock in your date in minutes.",
   },
 ];
 
@@ -40,7 +40,7 @@ export function WhyUs() {
           <p className="mt-6 text-balance font-display text-[clamp(1.8rem,3.8vw,3rem)] font-light leading-[1.12] text-ink">
             There are plenty of boats for hire on Anna Maria Island. There&apos;s
             only one that&apos;s <em className="italic text-brass-600">yours </em> alone,
-            captain and crew included, with a fifty-foot deck and nowhere
+            booked straight from the owner, with a fifty-foot deck and nowhere
             you&apos;d rather be.
           </p>
         </Reveal>

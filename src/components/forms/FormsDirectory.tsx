@@ -33,7 +33,7 @@ const FORMS = [
   {
     icon: Anchor,
     title: "7-13 Guest Charter",
-    desc: "Booking form for larger groups of 7 to 13 guests. Your captain and crew are included; choose your captain in the step below.",
+    desc: "Booking form for larger groups of 7 to 13 guests. A bareboat charter: you select and hire your captain directly in the step below.",
     href: GHL.forms.thirteenPersonCharter,
   },
 ];
@@ -89,10 +89,12 @@ export function FormsDirectory() {
         </div>
 
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
-          Every 7 to 13 guest charter runs with a professional captain and crew,
-          included in your rate. Review our captains below and note your
-          preferred captain when you complete the 7 to 13 guest charter form.
-          We&apos;ll do our best to match your request based on availability.
+          Charters for 7 to 13 guests follow the U.S. Coast Guard bareboat
+          model: you charter the boat and select a licensed captain, hired and
+          paid directly. Review our captains below and choose yours when you
+          complete the 7 to 13 guest charter form. The captain&apos;s fee is
+          arranged directly with your captain, separate from the boat charter,
+          with no broker markups or hidden fees.
         </p>
 
         <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

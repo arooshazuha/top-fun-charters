@@ -16,7 +16,7 @@ import type { CharterDepositPayload, CharterType, DepositInput } from "./types";
 
 /** Default vessel, single boat today, object-ready for a fleet later. */
 const VESSEL_ID = "topfun-50";
-const VESSEL_NAME = `${YACHT.name} (${YACHT.lengthFt}ft Performance Yacht)`;
+const VESSEL_NAME = `${YACHT.name} (${YACHT.lengthFt}ft Luxury Yacht)`;
 
 /** Thrown when the GHL webhook rejects the delivery (non-2xx). */
 export class GhlDeliveryError extends Error {

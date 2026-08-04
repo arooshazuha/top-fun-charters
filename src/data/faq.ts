@@ -15,7 +15,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "How many guests can come aboard?",
         answer:
-          "Either up to six or up to 13. There are two different packages and pricing schedules due to the requirement of crew and other considerations. While the boat is large enough to accommodate many more, six or 13 is the maximum legal number of passengers we are able to take.",
+          "Either up to six or up to 13, offered as two different packages. Charters for 1 to 6 guests are captained, with a licensed captain included in the rate. Charters for 7 to 13 guests follow the U.S. Coast Guard bareboat model, where you charter the boat and select a licensed captain who is hired and paid directly. Six or 13 is the maximum legal number of passengers we can take, including the person who booked.",
       },
       {
         question: "Does the guest count include the person who booked?",
@@ -100,6 +100,11 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         question: "How do I book a charter?",
         answer:
           "Use the \"Check pricing and availability\" button to open our live booking calendar, then complete the short charter form for your group size. A participant waiver is completed before your trip.",
+      },
+      {
+        question: "How does pricing work for 7 to 13 guests?",
+        answer:
+          "For groups of more than six, charters follow the U.S. Coast Guard bareboat model. The listed price is the private boat charter, and your licensed captain is selected and paid directly to the captain as a separate fee. The captain's fee is not bundled into the boat rate or paid by Top Fun Charters. You book directly with the owner-operator, so there are no broker markups or hidden booking fees.",
       },
       {
         question: "What payment methods do you accept?",
