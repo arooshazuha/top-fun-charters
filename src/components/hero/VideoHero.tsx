@@ -13,9 +13,11 @@ import { BookingButton } from "@/components/booking/BookingButton";
 import { LinkButton } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
-const POSTER = "/images/topfun-hero-poster.jpg";
-const VIDEO_1080 = "/videos/topfuncharters-hero.mp4";
-const VIDEO_720 = "/videos/topfuncharters-hero-720.mp4";
+// Poster shown for the instant before the video buffers: a premium gallery
+// still (turquoise aerial of the yacht cruising) rather than a raw video frame.
+const POSTER = "/images/aerial-turquoise-water.jpg";
+const VIDEO_1080 = "/videos/hero.mp4";
+const VIDEO_720 = "/videos/hero-720.mp4";
 
 const HEADLINE = ["Anna", "Maria", "private", "yacht", "charter"];
 
@@ -79,7 +81,7 @@ export function VideoHero() {
       >
         <Image
           src={POSTER}
-          alt="Aerial view of a Top Fun Charters luxury yacht on the Gulf of Mexico near Anna Maria Island, Florida"
+          alt="A Top Fun Charters luxury yacht cruising the Gulf of Mexico near Anna Maria Island, Florida"
           fill
           priority
           quality={82}
