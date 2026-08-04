@@ -16,8 +16,8 @@ import { cn } from "@/lib/utils";
 // Poster shown for the instant before the video buffers: a premium gallery
 // still (turquoise aerial of the yacht cruising) rather than a raw video frame.
 const POSTER = "/images/aerial-turquoise-water.jpg";
-const VIDEO_1080 = "/videos/hero.mp4";
-const VIDEO_720 = "/videos/hero-720.mp4";
+// Single high-quality source (lossless H.264, ~20s) served to all devices.
+const VIDEO_SRC = "/videos/hero.mp4";
 
 const HEADLINE = ["Anna", "Maria", "private", "yacht", "charter"];
 
@@ -33,7 +33,7 @@ const CHIPS = [
  * Gulf plays behind a luxury ocean gradient, with a subtle scroll-driven zoom +
  * parallax (Framer Motion). The poster ships as an optimized next/image for a
  * fast LCP; the video fades in once it can play. Respects prefers-reduced-motion
- * and Save-Data (poster only) and serves a lighter 720p source on small screens.
+ * and Save-Data (poster only). One lossless H.264 source is served to all devices.
  */
 export function VideoHero() {
   const ref = useRef<HTMLElement>(null);
@@ -49,9 +49,8 @@ export function VideoHero() {
         (navigator as unknown as { connection?: { saveData?: boolean } }).connection
           ?.saveData ?? false;
       if (saveData) return;
-      const mobile = window.matchMedia("(max-width: 768px)").matches;
       // eslint-disable-next-line react-hooks/set-state-in-effect
-      setVideoSrc(mobile ? VIDEO_720 : VIDEO_1080);
+      setVideoSrc(VIDEO_SRC);
     } catch {
       /* poster-only fallback */
     }
