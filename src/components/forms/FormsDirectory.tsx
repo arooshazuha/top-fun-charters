@@ -14,6 +14,7 @@ import {
 import { GHL } from "@/config/ghl";
 import { CAPTAINS } from "@/data/captains";
 import { track } from "@/lib/analytics";
+import { initials } from "@/lib/utils";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 
 const FORMS = [
@@ -104,14 +105,23 @@ export function FormsDirectory() {
               className="flex items-center gap-3 rounded-xl border border-line bg-sand-100 p-3"
             >
               <div className="relative size-12 shrink-0 overflow-hidden rounded-full ring-1 ring-line">
-                <Image
-                  src={c.photo}
-                  alt={`Captain ${c.name}`}
-                  fill
-                  quality={80}
-                  sizes="48px"
-                  className="object-cover"
-                />
+                {c.photo ? (
+                  <Image
+                    src={c.photo}
+                    alt={`Captain ${c.name}`}
+                    fill
+                    quality={80}
+                    sizes="48px"
+                    className="object-cover"
+                  />
+                ) : (
+                  <div
+                    className="flex h-full w-full items-center justify-center bg-sand-200 text-sm font-semibold text-ink/45"
+                    aria-hidden
+                  >
+                    {initials(c.name)}
+                  </div>
+                )}
               </div>
               <div className="min-w-0">
                 <p className="truncate font-medium text-ink">{c.name}</p>

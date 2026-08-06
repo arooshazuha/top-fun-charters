@@ -16,8 +16,11 @@ import { cn } from "@/lib/utils";
 // Poster shown for the instant before the video buffers: a premium gallery
 // still (turquoise aerial of the yacht cruising) rather than a raw video frame.
 const POSTER = "/images/aerial-turquoise-water.jpg";
-// Single high-quality source (lossless H.264, ~20s) served to all devices.
-const VIDEO_SRC = "/videos/hero.mp4";
+
+// Background video loop. Add clips here to cycle through them back-to-back
+// (each plays once, then advances, then wraps). A single pre-spliced file is
+// the most seamless option and loops natively with no transition flash.
+const HERO_CLIPS = ["/videos/hero.mp4"];
 
 const HEADLINE = ["Anna", "Maria", "private", "yacht", "charter"];
 
@@ -33,13 +36,15 @@ const CHIPS = [
  * Gulf plays behind a luxury ocean gradient, with a subtle scroll-driven zoom +
  * parallax (Framer Motion). The poster ships as an optimized next/image for a
  * fast LCP; the video fades in once it can play. Respects prefers-reduced-motion
- * and Save-Data (poster only). One lossless H.264 source is served to all devices.
+ * and Save-Data (poster only), and supports a spliced multi-clip loop via the
+ * HERO_CLIPS array (clips play back-to-back and wrap).
  */
 export function VideoHero() {
   const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
 
-  const [videoSrc, setVideoSrc] = useState<string | null>(null);
+  const [enabled, setEnabled] = useState(false);
+  const [clipIndex, setClipIndex] = useState(0);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -50,11 +55,14 @@ export function VideoHero() {
           ?.saveData ?? false;
       if (saveData) return;
       // eslint-disable-next-line react-hooks/set-state-in-effect
-      setVideoSrc(VIDEO_SRC);
+      setEnabled(true);
     } catch {
       /* poster-only fallback */
     }
   }, [reduce]);
+
+  const multiClip = HERO_CLIPS.length > 1;
+  const currentClip = HERO_CLIPS[clipIndex];
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -87,17 +95,22 @@ export function VideoHero() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        {videoSrc && (
+        {enabled && (
           <video
-            key={videoSrc}
-            src={videoSrc}
+            key={currentClip}
+            src={currentClip}
             poster={POSTER}
             autoPlay
             muted
-            loop
+            loop={!multiClip}
             playsInline
             preload="auto"
             onCanPlay={() => setReady(true)}
+            onEnded={
+              multiClip
+                ? () => setClipIndex((i) => (i + 1) % HERO_CLIPS.length)
+                : undefined
+            }
             className={cn(
               "absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-700",
               ready ? "opacity-100" : "opacity-0",

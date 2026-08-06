@@ -1,82 +1,52 @@
 /**
- * Captain roster. Names, bios and photos are taken directly from the existing
- * captain list, bios are verbatim. Personal phone numbers from the source are
- * intentionally NOT published; all contact routes through the main line.
- * `credentials` only lists certifications explicitly stated by the captain.
+ * Active captain roster (the 4 captains confirmed by Matt). Names are the
+ * source of truth; bios and photos are included only where verified, so a new
+ * captain shows a name + initials until their bio/photo is provided. Personal
+ * phone numbers are intentionally NOT published, all contact routes through the
+ * main line. `credentials` only lists certifications explicitly stated.
  */
 
 export type Captain = {
   slug: string;
   name: string;
   role: string;
-  bio: string;
-  photo: string;
+  /** Verified bio, when available. */
+  bio?: string;
+  /** Headshot path, when available; cards fall back to initials otherwise. */
+  photo?: string;
   credentials: string[];
   tags: string[];
 };
 
 export const CAPTAINS: Captain[] = [
   {
-    slug: "bob-arnett",
-    name: "Bob Arnett",
+    slug: "jimmy-barrett",
+    name: "Jimmy Barrett",
     role: "Captain",
-    bio: "Years of charter experience providing families and friends a fun and safe experience. Knowledge of local waters.",
-    photo: "/captains/bob-arnett.jpg",
     credentials: [],
-    tags: ["Local waters", "Families"],
+    tags: [],
   },
   {
-    slug: "wyatt-tomlinson",
-    name: "Wyatt Tomlinson",
+    slug: "josh-smith",
+    name: "Josh Smith",
     role: "Captain",
-    bio: "Two years captaining large vessels. Excellent with families. Experience navigating Bradenton, Sarasota, Venice, Englewood, Boca Grande and more!",
-    photo: "/captains/wyatt-tomlinson.jpg",
     credentials: [],
-    tags: ["Families", "Gulf Coast"],
-  },
-  {
-    slug: "rick-schendel",
-    name: "Rick Schendel",
-    role: "Captain",
-    bio: "Local, skilled professional with extensive experience in captaining yachts. Passionate about providing a safe and fun experience for all.",
-    photo: "/captains/rick-schendel.jpg",
-    credentials: [],
-    tags: ["Local", "Yachts"],
-  },
-  {
-    slug: "tom-korinek",
-    name: "Tom Korinek",
-    role: "Captain",
-    bio: "15 years experience, Master of Yachts, STCW Basic Safety Training. Great with families and corporate groups.",
-    photo: "/captains/tom-korinek.jpg",
-    credentials: ["Master of Yachts", "STCW Basic Safety Training"],
-    tags: ["15 years", "Corporate groups"],
-  },
-  {
-    slug: "isaac-hughes",
-    name: "Isaac Hughes",
-    role: "Captain",
-    bio: "Coast Guard 100 Ton master captain.",
-    photo: "/captains/isaac-hughes.jpg",
-    credentials: ["USCG 100 Ton Master"],
-    tags: ["USCG licensed"],
-  },
-  {
-    slug: "rickey-bianculli",
-    name: "Rickey Bianculli",
-    role: "Captain",
-    bio: "Years of captaining large vessels. Experience navigating Bradenton, Sarasota, Venice, AMI and more!",
-    photo: "/captains/rickey-bianculli.jpg",
-    credentials: [],
-    tags: ["Large vessels", "Gulf Coast"],
+    tags: [],
   },
   {
     slug: "christopher-driggers",
-    name: "Christopher Ian Driggers",
+    name: "Christopher Driggers",
     role: "Captain",
     bio: "Tampa fire and water rescue.",
     photo: "/captains/christopher-driggers.jpg",
     credentials: [],
     tags: ["Fire & water rescue"],
+  },
+  {
+    slug: "clif-prat",
+    name: "Clif Prat",
+    role: "Captain",
+    credentials: [],
+    tags: [],
   },
 ];

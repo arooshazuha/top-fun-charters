@@ -1,19 +1,29 @@
 import Image from "next/image";
 import { BadgeCheck } from "lucide-react";
 import type { Captain } from "@/data/captains";
+import { initials } from "@/lib/utils";
 
 export function CaptainCard({ captain }: { captain: Captain }) {
   return (
     <article className="lift flex gap-5 rounded-xl border border-line bg-sand-100 p-5 shadow-[var(--shadow-card)]">
       <div className="relative size-24 shrink-0 overflow-hidden rounded-full ring-1 ring-line sm:size-28">
-        <Image
-          src={captain.photo}
-          alt={`Captain ${captain.name}`}
-          fill
-          quality={82}
-          sizes="120px"
-          className="object-cover"
-        />
+        {captain.photo ? (
+          <Image
+            src={captain.photo}
+            alt={`Captain ${captain.name}`}
+            fill
+            quality={82}
+            sizes="120px"
+            className="object-cover"
+          />
+        ) : (
+          <div
+            className="flex h-full w-full items-center justify-center bg-sand-200 font-display text-2xl text-ink/45"
+            aria-hidden
+          >
+            {initials(captain.name)}
+          </div>
+        )}
       </div>
 
       <div className="min-w-0">
@@ -21,7 +31,9 @@ export function CaptainCard({ captain }: { captain: Captain }) {
           {captain.name}
         </h3>
         <p className="text-sm font-medium text-brass-600">{captain.role}</p>
-        <p className="mt-2 text-sm leading-relaxed text-muted">{captain.bio}</p>
+        {captain.bio && (
+          <p className="mt-2 text-sm leading-relaxed text-muted">{captain.bio}</p>
+        )}
 
         {(captain.credentials.length > 0 || captain.tags.length > 0) && (
           <div className="mt-3 flex flex-wrap gap-1.5">

@@ -38,10 +38,9 @@ export default function CaptainsPage() {
         <div className="mt-10 flex items-start gap-3 rounded-xl border border-line bg-sand-100 p-5">
           <ShieldCheck className="mt-0.5 size-5 shrink-0 text-brass-600" />
           <p className="text-sm leading-relaxed text-muted">
-            Your captain is assigned based on your date and charter. Several of
-            our captains hold U.S. Coast Guard and Master of Yachts credentials,
-            and safety always comes first, on the water, the captain&apos;s word
-            is the final say.
+            Your captain is assigned based on your date and charter, and every
+            trip runs with a licensed, professional captain. Safety always comes
+            first, and the captain&apos;s word is the final say on the water.
           </p>
         </div>
       </Section>
