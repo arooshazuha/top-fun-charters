@@ -6,6 +6,7 @@ import { localBusinessSchema, websiteSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SiteChrome } from "@/components/layout/SiteChrome";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -60,9 +61,9 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <Header />
-        <main id="main">{children}</main>
-        <Footer />
+        <SiteChrome header={<Header />} footer={<Footer />}>
+          {children}
+        </SiteChrome>
       </body>
     </html>
   );

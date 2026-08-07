@@ -8,7 +8,9 @@
       "Bash(npx --yes create-next-app@latest scaffoldtmp --ts --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --skip-install --yes)",
       "Bash(sort -k5 -n)",
       "Bash(awk '{print $5\"\\\\t\"$9}')",
-      "Bash(grep -v '^\\\\s*$')"
+      "Bash(grep -v '^\\\\s*$')",
+      "Bash(npm run *)",
+      "Bash(git check-ignore *)"
     ]
   }
 }
